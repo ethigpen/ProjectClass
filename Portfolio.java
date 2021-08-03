@@ -11,9 +11,7 @@ public class Portfolio{
 
     // methods
     public void showPortfolio(){
-        // for(int i = 0; i < projects.size(); i++){
-        //     System.out.println(projects.get(i));
-        // }
+        System.out.println("Current Projects:");
         for(Project item:projects){
             System.out.println(item.elevatorPitch());
         }
@@ -23,12 +21,12 @@ public class Portfolio{
         projects.add(name);
     }
     // method to get cost
-    public double getPortfolioCost(){
+    public String getPortfolioCost(){
         double totalCost = 0;
         for(Project item:projects){
             totalCost += item.getInitialCost();
         }
-        return totalCost;
+        return String.format("The total cost is $%.2f", totalCost);
     }
 
     // get
